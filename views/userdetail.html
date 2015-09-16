@@ -1,0 +1,36 @@
+<div ng-show="user">
+<div class="row">
+<div class="col-md-4 col-lg-4 col-sm-4 text-center">
+	<img style="height:240px;width:180px;" class="img-thumbnail" ng-src= "{{ user.avatar_url }}" title="{{ user.name }}">
+</div>
+<div class="col-md-8 col-lg-8 col-sm-8 text-center">
+<h3>{{ user.name }}</h3>
+<p><a target="_blank" href="{{user.blog}}">{{ user.blog }}</a></p>
+Order by: 
+<select ng-model = "repoSortOrder">
+	<option value="+name">Name</option>
+	<option value = "+language">Language</option>
+</select>
+<hr>
+<button class="btn btn-info" ng-click="goBack()">Go Back</button>
+</div>
+</div>
+<hr>
+<div class="repo text-center" ng-repeat="repo in repos| orderBy:repoSortOrder">
+	<h3><a target="_blank" href="{{ repo.html_url}}">{{ repo.name }}</a></h3>
+	<div class="row">
+		<div class="col-md-4 col-lg-4">
+			<h4>Language</h4>
+			<p>{{ repo.language }}</p>
+		</div>
+		<div class="col-md-8 col-lg-8 desc">
+			<h4>Description</h4>
+			<p>{{ repo.description }}</p>
+		</div>
+	</div>
+</div>
+</div>
+<div ng-show="error">
+	<h3>No such user profile found.</h3>
+	<button class="btn btn-info" ng-click="goBack()">Go Back</button>
+</div>

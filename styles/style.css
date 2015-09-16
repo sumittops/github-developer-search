@@ -1,0 +1,19 @@
+.repo{
+	margin-top:3px;
+	margin-bottom:5px;
+	background:#EEE;
+	margin:5px;
+	border-radius:5px;
+	box-shadow:#DDD 0 0 3px 3px;
+	width:75%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.repo h3{
+	color:#35B5E5;
+	width:100%;
+}
+.desc{
+	border-left: solid 1px #AAA;
+	margin-bottom:15px;
+}

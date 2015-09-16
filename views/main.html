@@ -1,0 +1,9 @@
+<div>
+	<h2 ng-show="countdown">Automatic Search starts in {{ countdown }}</h2>
+	<form name="userSearch" ng-submit="search(username)" class="form-inline" role="form">
+		<div class="form-group">
+			<input type="search" class="form-control" size="35" required placeholder="User to search!" ng-model = "username" />
+			<input type="submit" class="btn btn-info "value="Search"/>
+		</div>
+	</form>	
+</div>

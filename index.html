@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="githubViewer" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+	<script src="https://code.angularjs.org/1.4.5/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.4.5/angular-route.min.js"></script>
+	<script src="app.js"></script>
+	<script src="controllers/MainCtrl.js"></script>
+	<script src="controllers/UserCtrl.js"></script>
+	<script src="services/github.js"></script>
+	<title>Github Developer Search</title>
+	<link href="styles/style.css" rel="stylesheet"/>
+</head>
+<body>
+	<div class="jumbotron text-center">
+		<h2>Github Developer Search</h2>
+		<p>Perform a Github user search by using their Github username.</p>
+	</div>
+	<div ng-view class="container"></div>
+	<div class="text-center" style="margin-top:100px;background-color:#EEE;margin-bottom:0;padding:10px;"><h5>A sample Angular application using Github API</h5></div>
+</body>
+</html>
